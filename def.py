@@ -20,3 +20,14 @@ s2=cricket("19",871)
 
 s1.display()
 s2.display() 
+
+print("............................................")
+class student():
+    def __init__(self,name,marks):
+        self.name=name 
+        self.marks=marks
+    def display(self):
+        print(self.name,self.marks)
+s1=student('adii',"90")
+s2=student('rahul',"19")
+
