@@ -25,3 +25,6 @@ class bankaccount:
             print("₹", amount, "Withdrawn Successfully")
         else:
             print("Insufficient Balance")
+    # Get Balance (Private variable access)
+    def get_balance(self):
+        return self.__balance
