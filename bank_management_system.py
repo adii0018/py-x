@@ -10,5 +10,11 @@ class bankaccount:
        print("name ❄️",self.name)
        print("Account NO ❄️",self.__acc_no) 
        print("Balance ❄️",self._balance)
-       
+       # Deposit Money
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            print("₹", amount, "Deposited Successfully❤️")
+        else:
+            print("Invalid Deposit Amount😂")
 
