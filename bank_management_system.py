@@ -18,3 +18,10 @@ class bankaccount:
         else:
             print("Invalid Deposit Amount😂")
 
+    # Withdraw Money
+    def withdraw(self, amount):
+        if amount <= self.__balance:
+            self.__balance -= amount
+            print("₹", amount, "Withdrawn Successfully")
+        else:
+            print("Insufficient Balance")
