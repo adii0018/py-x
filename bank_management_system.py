@@ -35,3 +35,20 @@ class bankaccount:
             print("₹", amount, "Withdrawn Successfully")
         else:
             print("Insufficient Balance")
+
+# Get Balance (Private variable access)
+    def get_balance(self):
+        return self.__balance
+
+
+# Child Class using Inheritance
+class SavingsAccount(BankAccount):
+
+    def __init__(self, name, acc_no, balance, interest_rate):
+        super().__init__(name, acc_no, balance)
+        self.interest_rate = interest_rate
+
+    def add_interest(self):
+        interest = self.get_balance() * self.interest_rate / 100
+        self.deposit(interest)
+        print("Interest Added:", interest)
