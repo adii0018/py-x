@@ -28,3 +28,10 @@ class bankaccount:
     # Get Balance (Private variable access)
     def get_balance(self):
         return self.__balance
+    # Withdraw Money
+    def withdraw(self, amount):
+        if amount <= self.__balance:
+            self.__balance -= amount
+            print("₹", amount, "Withdrawn Successfully")
+        else:
+            print("Insufficient Balance")
