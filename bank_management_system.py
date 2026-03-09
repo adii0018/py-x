@@ -1,54 +1,43 @@
-class bankaccount:
-    bank_name="adii bank "
-    def __init__(self,name,acc_no,balance):
+class Bankaccount:
+    Bank_name="ASR BANK !!!🏦"
+    def __init__(self,name,balance,acc_no):
         self.name=name
-        self.__acc_no=acc_no
-        self._balance=balance
-    #show 
-    def show_detail(self):
-       print("Bank name ❄️",bankaccount.bank_name)
-       print("name ❄️",self.name)
-       print("Account NO ❄️",self.__acc_no) 
-       print("Balance ❄️",self._balance)
-       # Deposit Money
-    def deposit(self, amount):
-        if amount > 0:
+        self._acc_no=acc_no
+        self.__balance=balance
+        
+#Show account details 🌿
+
+    def show_details(self):
+        print("\n>>>>>>>>>>>>>> ACCOUNT DETAILS >>>>>>>>>>>>>>>>>>>>>>>>")
+        print("Bank name ",Bankaccount.Bank_name)
+        print("Name ", self.name)
+        print("ACCOUNT NO  ", self._acc_no)
+        print("Balance ",self.__balance)
+
+#Deposit money 🌿
+
+    def deposit(self,amount):
+        if amount >=0:
             self.__balance += amount
-            print("₹", amount, "Deposited Successfully❤️")
+            print("💸",amount,"Deposit Successfully !!!!")
         else:
-            print("Invalid Deposit Amount😂")
+            print("🛑","Invalid deposit ")
 
-    # Withdraw Money
-    def withdraw(self, amount):
-        if amount <= self.__balance:
+#withdraw money 🌿
+
+    def withdraw(self,amount):
+        if amount <=self.__balance:
             self.__balance -= amount
-            print("₹", amount, "Withdrawn Successfully")
+            print("💸",amount,"withdraw Successfully !!!!!")
+        
         else:
-            print("Insufficient Balance")
-    # Get Balance (Private variable access)
+            print("🛑",amount,"Insufficent balance !!!!!!")
+
+#Get balance 🌿        
+
     def get_balance(self):
+        
         return self.__balance
-    # Withdraw Money
-    def withdraw(self, amount):
-        if amount <= self.__balance:
-            self.__balance -= amount
-            print("₹", amount, "Withdrawn Successfully")
-        else:
-            print("Insufficient Balance")
+    
 
-# Get Balance (Private variable access)
-    def get_balance(self):
-        return self.__balance
-
-
-# Child Class using Inheritance
-class SavingsAccount(BankAccount):
-
-    def __init__(self, name, acc_no, balance, interest_rate):
-        super().__init__(name, acc_no, balance)
-        self.interest_rate = interest_rate
-
-    def add_interest(self):
-        interest = self.get_balance() * self.interest_rate / 100
-        self.deposit(interest)
-        print("Interest Added:", interest)
+        
