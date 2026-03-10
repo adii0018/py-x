@@ -23,4 +23,17 @@ for movie in movies:
         best_movie = name
 
 print("\n⭐ Best Movie:", best_movie)
-print("⭐ Rating:", highest)
+print("⭐ Rating:", highest
+
+     #Movie: Interstellar
+#Rating: 9.0
+#Year: 2014
+#--------------
+
+#Movie: Inception
+#Rating: 8.8
+#Year: 2010
+#--------------
+
+#⭐ Best Movie: Interstellar
+#⭐ Rating: 9.0
